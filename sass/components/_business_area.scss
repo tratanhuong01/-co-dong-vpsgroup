@@ -1,0 +1,153 @@
+.business__area {
+    margin-top: -3rem;
+    margin-left: 24.6rem;
+    margin-bottom: 3rem;
+    @include flexJustifyAlign(flex-start, center);
+    &--left {
+        &--top {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4rem;
+            line-height: 6.1rem;
+            &--dark {
+                color: $color-gray;
+            }
+            &--light {
+                color: $color-red-bold;
+            }
+        }
+        &--center {
+            @include flexJustifyAlign(flex-start, center);
+            margin-left: -5.5rem;
+            margin-top: -1rem;
+            svg {
+                margin-right: 0.3rem;
+            }
+            &--light {
+                display: block;
+                background-color: $color-red-bold;
+                width: 2rem;
+                height: 0.3rem;
+            }
+            &--dark {
+                display: block;
+                background-color: $color-gray;
+                width: 2rem;
+                height: 0.2rem;
+            }
+        }
+        &--title {
+            margin-top: 2.181rem;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+            max-width: 28.7rem;
+            color: $color-gray-bold;
+        }
+        &--footer {
+            @include flexJustifyAlign(flex-start, center);
+            gap: 1.312rem;
+            margin-top: 2.4rem;
+            span {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.6rem;
+                line-height: 2.6rem;
+                color: #242424;
+            }
+        }
+    }
+    &--wrapper-- {
+        padding-top: 3rem;
+        flex: 1;
+        overflow: hidden;
+    }
+    &--content {
+        width: 100%;
+        margin-left: 5.867rem;
+        display: flex;
+    }
+    &--item {
+        padding: 0.7rem;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 18.323rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $color-red-bold;
+            top: 0.516rem;
+            z-index: 100;
+            height: 1.032rem;
+        }
+        &--hover {
+            position: absolute;
+            width: 50%;
+            left: 0;
+            top: 0;
+            transform: scaleY(0);
+            background-color: $color-red-bold;
+            top: 0.516rem;
+            z-index: 5;
+            padding: calc(1.032rem / 2) 0rem;
+            height: 1.032rem;
+            transform-origin: top;
+        }
+        &:hover {
+            &::before {
+                display: none;
+            }
+        }
+        &:hover &--hover {
+            width: 100%;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            transform: scale(1);
+            left: 0;
+            height: 100rem;
+            z-index: -100;
+            transition: transform 1s;
+        }
+        &:hover &--title {
+            color: #ffffff;
+        }
+        position: relative;
+        width: 40.6rem;
+        margin-right: 6.989rem;
+        flex-shrink: 0;
+        &--top {
+            padding: 8.772rem 0rem;
+            background: linear-gradient(to right, #c4c4c4 2px, transparent 2px) 0 0,
+                linear-gradient(to left, #c4c4c4 2px, transparent 2px) 100% 0,
+                linear-gradient(to bottom, #c4c4c4 2px, transparent 2px) 0 0,
+                linear-gradient(to bottom, #c4c4c4 2px, transparent 2px) 100% 0;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            @include flexJustifyAlign(center, center);
+        }
+        &--title {
+            position: relative;
+            z-index: 10;
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 2.7rem;
+            line-height: 4.8rem;
+            display: flex;
+            padding: 0rem 3.226rem;
+            align-items: center;
+            text-align: center;
+            color: $color-red-bold;
+        }
+        &--image {
+            padding: 3.226rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

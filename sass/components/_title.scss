@@ -1,0 +1,30 @@
+.title {
+    margin: auto;
+    &__top {
+        font-family: "Oswald";
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 2.5;
+        font-style: normal;
+        text-align: center;
+        color: $color-red-bold;
+    }
+    &__footer {
+        @include flexJustifyAlign(center, center);
+        transform: translateY(-50%);
+        span {
+            display: block;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+        }
+        &--light {
+            width: calc((4.433rem / 2) - 0.4rem);
+            background-color: $color-red-bold;
+            height: 0.3rem;
+        }
+        &--dark {
+            width: calc((4.433rem / 2));
+            height: 0.2rem;
+            background-color: $color-gray;
+        }
+    }
+}

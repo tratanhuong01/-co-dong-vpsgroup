@@ -1,0 +1,70 @@
+.banner {
+    width: 100%;
+    height: 924px;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    padding-bottom: 19.258rem;
+    &__button {
+        &:hover svg {
+            transform: scale(1.3);
+            transition: all 0.9s;
+        }
+        &:hover {
+            transition: all 0.3s;
+            background-color: $color-red;
+            border: 1px solid $color-red;
+        }
+        width: 5.4rem;
+        overflow: hidden;
+        height: 5.4rem;
+        border-radius: 100rem;
+        position: absolute;
+        top: 45%;
+        left: 2.4rem;
+        transform: translateY(-50%);
+        @include flexJustifyAlign(center, center);
+        border: 1px solid #ffffff;
+    }
+    &__wrapper {
+        @include flexJustifyAlign(flex-start, end);
+        height: 100%;
+    }
+    &__main {
+        h1 {
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 5rem;
+            line-height: 6.4rem;
+            color: #ffffff;
+            text-shadow: 0rem 0.4rem 1.1rem #000000;
+            height: 16.1rem;
+        }
+        p {
+            max-width: 49.5rem;
+            padding-top: 0.4rem;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2.8rem;
+            color: #ffffff;
+            text-shadow: 0rem 0.4rem 1.1rem #000000;
+            margin-bottom: 3.242rem;
+        }
+        a {
+            background: rgba(255, 87, 87, 0.5);
+            border: 0.1rem solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28.4rem;
+            height: 7.6rem;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 2.4rem;
+            line-height: 2.8rem;
+            color: #ffffff;
+        }
+    }
+}

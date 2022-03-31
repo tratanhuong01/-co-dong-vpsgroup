@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- font -->
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/app.css/app.css">
+    <!-- css -->
+
+</head>
+
+<body>
+    <header class="header container">
+        <div class="wrapper header__main">
+            <div class="header__logo">
+                <img src="./images/logo.png" alt="" srcset="">
+            </div>
+            <ul class="header__menu">
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Giới thiệu</a></li>
+                <li><a href="">Lĩnh vực kinh doanh</a></li>
+                <li><a href="">Quan hệ cổ đông</a></li>
+                <li><a href="">Tin Tức</a></li>
+                <li><a href="">Tuyển dụng</a></li>
+                <li><a href="">Liên hệ</a></li>
+            </ul>
+            <div class="header__right">
+                <div>
+                    <!-- <span>1900 96 96 35</span> -->
+                    <svg width="25" height="28" viewBox="0 0 25 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.6773 17.4864L20.6865 17.496L20.6966 17.5045L23.1269 19.5618C23.6568 20.1525 23.9577 20.9539 23.9577 21.7936C23.9577 22.6389 23.6527 23.4455 23.1161 24.0373L23.1104 24.0436L23.1051 24.0503L22.1998 25.1966C20.2368 27.2539 17.5692 27.5075 14.7287 26.5434C11.8782 25.5759 8.89187 23.3892 6.38801 20.6398C3.88512 17.8914 1.8842 14.6024 0.986477 11.4531C0.0896813 8.30702 0.302618 5.34225 2.15163 3.16987L3.29249 2.08257L3.29274 2.08283L3.30199 2.07301C3.84005 1.50179 4.55531 1.1911 5.29207 1.19917C6.02507 1.20721 6.73135 1.53027 7.2584 2.10786C7.26082 2.11124 7.26584 2.11817 7.27446 2.13027L7.33735 2.21899C7.39078 2.2946 7.46558 2.40081 7.55463 2.52743C7.7327 2.78064 7.96737 3.11496 8.20116 3.44823L8.84219 4.36248L8.85684 4.38337H8.79074L9.14817 4.79686C9.65681 5.38527 9.94318 6.17099 9.94214 6.99161C9.9411 7.81223 9.65274 8.59703 9.14265 9.18383L9.13757 9.18968L9.13285 9.19583L7.52972 11.2889L7.44551 11.3988L7.49405 11.5285C8.14657 13.272 9.10621 14.8579 10.3189 16.1946C11.5317 17.5314 12.9738 18.5927 14.5631 19.3164L14.7146 19.3854L14.8367 19.2722L16.744 17.5036L16.7498 17.4982L16.7552 17.4925C17.2872 16.9325 17.9896 16.6241 18.7152 16.623C19.4409 16.6219 20.144 16.9281 20.6773 17.4864Z"
+                            fill="#B60000" stroke="white" stroke-width="0.5" />
+                    </svg>
+                </div>
+                <div>
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M17.3456 9.24C17.3456 13.52 13.9497 16.94 9.82126 16.94C5.69278 16.94 2.29688 13.52 2.29688 9.24C2.29688 4.96002 5.69278 1.54 9.82126 1.54C13.9497 1.54 17.3456 4.96002 17.3456 9.24Z"
+                            stroke="#B60000" stroke-width="3" />
+                        <line y1="-1.5" x2="9.10612" y2="-1.5"
+                            transform="matrix(0.651316 0.758806 -0.746228 0.665691 14.3081 15.7417)" stroke="#B60000"
+                            stroke-width="3" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner" style="background-image: url('./images/banner.png');">
+        <div class="banner__button">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M27.4129 14H2.90039" stroke="white" stroke-linecap="round" />
+                <path d="M14.8252 0.5L1.5752 14L14.8252 27.5" stroke="white" stroke-linecap="round" />
+            </svg>
+        </div>
+        <div class="wrapper banner__wrapper">
+            <div class="banner__main">
+                <h1>TÂN HỒNG HÀ GROUP <br /> CHUNG TAY DỰNG XÂY ĐẲNG CẤP</h1>
+                <p>
+                    Để đáp ứng tối đa nhu cầu đa dạng của khách hàng, chúng tôi đã có những bước phát triển không ngừng
+                    để mở rộng quy mô, ngày càng hoàn thiện hơn về chuyên môn, chuyên sâu trong lĩnh vực kinh doanh,
+                    trang
+                    thiết bị máy móc hiện đại, đội ngũ kỹ thuật tay nghề cao, sản phẩm kinh doanh chất lượng.</p>
+                <a href="">Tìm hiểu thêm</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper news__event">
+        <div class="title news__event__top">
+            <p class="title__top">TIN TỨC - SỰ KIỆN</p>
+            <div class="title__footer">
+                <span class="title__footer--dark"></span>
+                <span class="title__footer--light"></span>
+                <svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_107_826)">
+                        <path d="M16.1656 0L11.2261 12.0657L16.1656 17.0052L18.118 9.41048H20.5389L16.1656 0Z"
+                            fill="#FFEF00" />
+                        <path d="M0 11.7533L9.93762 20.1681L16.1657 17.0052L9.56667 12.7881L10.3086 10.5038L0 11.7533Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M6.16943 30.75L17.259 23.8972L16.1656 17.0052L10.1328 21.9838L8.18039 20.5586L6.16943 30.75Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M26.1617 30.75L23.0574 18.0986L16.1655 17.0052L19.0355 24.2876L17.0831 25.6933L26.1617 30.75Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M32.3312 11.7533L19.3284 10.7771L16.1655 17.0052L23.9751 16.5171L24.717 18.8014L32.3312 11.7533Z"
+                            fill="#FFEF00" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_107_826">
+                            <rect width="32.3314" height="30.75" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="title__footer--light"></span>
+                <span class="title__footer--dark"></span>
+            </div>
+        </div>
+        <div class="news__event__content wrapper">
+            <div class="news__event__content--button news__event__content--button--left">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.6408 11.9999H1.84229" stroke="#9B9B9B" stroke-linecap="round" />
+                    <path d="M11.4741 1.09607L0.7722 11.9999L11.4741 22.9038" stroke="#9B9B9B" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="news__event__content--item">
+                <div class="news__event__content--item--image">
+                    <img src="./images/news-event.png" alt="">
+                </div>
+                <h3>CHÀO MỪNG KỶ NIỆM 30 NĂM THÀNH LẬP TẬP ĐOÀN TÂN HỒNG HÀ</h3>
+                <p>Tập đoàn Tân Hồng Hà Kỹ niệm 30 năm ngày thành lập 1991 - 2021</p>
+                <div class="news__event__content--item--footer">
+                    <span>09/04/2016</span>
+                    <div>
+                        <p>Tiếp</p>
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5L1 3.5ZM20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464465C16.9763 0.269203 16.6597 0.269203 16.4645 0.464465C16.2692 0.659727 16.2692 0.976309 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM1 4.5L20 4.5L20 3.5L1 3.5L1 4.5Z"
+                                fill="#B60000" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+            <div class="news__event__content--item">
+                <div class="news__event__content--item--image">
+                    <img src="./images/news-event.png" alt="">
+                </div>
+                <h3>CHÀO MỪNG KỶ NIỆM 30 NĂM THÀNH LẬP TẬP ĐOÀN TÂN HỒNG HÀ</h3>
+                <p>Tập đoàn Tân Hồng Hà Kỹ niệm 30 năm ngày thành lập 1991 - 2021</p>
+                <div class="news__event__content--item--footer">
+                    <span>09/04/2016</span>
+                    <div>
+                        <p>Tiếp</p>
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5L1 3.5ZM20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464465C16.9763 0.269203 16.6597 0.269203 16.4645 0.464465C16.2692 0.659727 16.2692 0.976309 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM1 4.5L20 4.5L20 3.5L1 3.5L1 4.5Z"
+                                fill="#B60000" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+            <div class="news__event__content--item">
+                <div class="news__event__content--item--image">
+                    <img src="./images/news-event.png" alt="">
+                </div>
+                <h3>CHÀO MỪNG KỶ NIỆM 30 NĂM THÀNH LẬP TẬP ĐOÀN TÂN HỒNG HÀ</h3>
+                <p>Tập đoàn Tân Hồng Hà Kỹ niệm 30 năm ngày thành lập 1991 - 2021</p>
+                <div class="news__event__content--item--footer">
+                    <span>09/04/2016</span>
+                    <div>
+                        <p>Tiếp</p>
+                        <svg width="21" height="8" viewBox="0 0 21 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1 3.5C0.723858 3.5 0.5 3.72386 0.5 4C0.5 4.27614 0.723858 4.5 1 4.5L1 3.5ZM20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464465C16.9763 0.269203 16.6597 0.269203 16.4645 0.464465C16.2692 0.659727 16.2692 0.976309 16.4645 1.17157L19.2929 4L16.4645 6.82843C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM1 4.5L20 4.5L20 3.5L1 3.5L1 4.5Z"
+                                fill="#B60000" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="news__event__content--button news__event__content--button--right">
+                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.35916 11.9999H21.1577" stroke="#9B9B9B" stroke-linecap="round" />
+                    <path d="M11.5259 1.09607L22.2278 11.9999L11.5259 22.9038" stroke="#9B9B9B"
+                        stroke-linecap="round" />
+                </svg>
+            </div>
+        </div>
+        <div class="news__event__footer">
+            <a hre="">
+                Xem thêm
+                <svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M29.3536 4.35355C29.5488 4.15829 29.5488 3.84171 29.3536 3.64645L26.1716 0.464466C25.9763 0.269204 25.6597 0.269204 25.4645 0.464466C25.2692 0.659728 25.2692 0.976311 25.4645 1.17157L28.2929 4L25.4645 6.82843C25.2692 7.02369 25.2692 7.34027 25.4645 7.53553C25.6597 7.7308 25.9763 7.7308 26.1716 7.53553L29.3536 4.35355ZM0 4.5H29V3.5H0V4.5Z"
+                        fill="#B60000" />
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section class="business__area">
+        <div class="business__area--left">
+            <p class="business__area--left--top">
+                <span class="business__area--left--top--dark">LĨNH VỰC</span><br />
+                <span class="business__area--left--top--light">KINH DOANH</span>
+            </p>
+            <div class="business__area--left--center">
+                <svg width="33" height="31" viewBox="0 0 33 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_107_826)">
+                        <path d="M16.1656 0L11.2261 12.0657L16.1656 17.0052L18.118 9.41048H20.5389L16.1656 0Z"
+                            fill="#FFEF00" />
+                        <path d="M0 11.7533L9.93762 20.1681L16.1657 17.0052L9.56667 12.7881L10.3086 10.5038L0 11.7533Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M6.16943 30.75L17.259 23.8972L16.1656 17.0052L10.1328 21.9838L8.18039 20.5586L6.16943 30.75Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M26.1617 30.75L23.0574 18.0986L16.1655 17.0052L19.0355 24.2876L17.0831 25.6933L26.1617 30.75Z"
+                            fill="#FFEF00" />
+                        <path
+                            d="M32.3312 11.7533L19.3284 10.7771L16.1655 17.0052L23.9751 16.5171L24.717 18.8014L32.3312 11.7533Z"
+                            fill="#FFEF00" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_107_826">
+                            <rect width="32.3314" height="30.75" fill="white" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <span class="business__area--left--center--light"></span>
+                <span class="business__area--left--center--dark"></span>
+                <span class="business__area--left--center--dark"></span>
+                <span class="business__area--left--center--dark"></span>
+            </div>
+            <p class="business__area--left--title">Tập đoàn Tân Hồng Hà Sự lựa chọn hàng đầu cho văn phòng đẳng cấp. Sản
+                phẩm đa dạng chủng loại, chất lượng
+                đến từ những thương hiệu máy thiết bị văn phòng hàng đầu thế giới.</p>
+            <div class="business__area--left--footer">
+                <svg style="transform: rotate(180deg);" width="30" height="8" viewBox="0 0 30 8" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M29.3536 4.35355C29.5488 4.15829 29.5488 3.84171 29.3536 3.64645L26.1716 0.464466C25.9763 0.269204 25.6597 0.269204 25.4645 0.464466C25.2692 0.659728 25.2692 0.976311 25.4645 1.17157L28.2929 4L25.4645 6.82843C25.2692 7.02369 25.2692 7.34027 25.4645 7.53553C25.6597 7.7308 25.9763 7.7308 26.1716 7.53553L29.3536 4.35355ZM0 4.5H29V3.5H0V4.5Z"
+                        fill="#000000" />
+                </svg>
+                <span>Trượt để khám phá</span>
+                <svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M29.3536 4.35355C29.5488 4.15829 29.5488 3.84171 29.3536 3.64645L26.1716 0.464466C25.9763 0.269204 25.6597 0.269204 25.4645 0.464466C25.2692 0.659728 25.2692 0.976311 25.4645 1.17157L28.2929 4L25.4645 6.82843C25.2692 7.02369 25.2692 7.34027 25.4645 7.53553C25.6597 7.7308 25.9763 7.7308 26.1716 7.53553L29.3536 4.35355ZM0 4.5H29V3.5H0V4.5Z"
+                        fill="#000000" />
+                </svg>
+            </div>
+        </div>
+        <div class="business__area--wrapper--">
+            <div class="business__area--content">
+                <div class="business__area--item">
+                    <div class="business__area--item--top">
+                        <svg width="130" height="108" viewBox="0 0 130 108" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M104.028 75.7617H127.696V45.6921C127.696 43.3336 126.759 41.0718 125.091 39.4041C123.422 37.7364 121.16 36.7993 118.801 36.7993H10.5423C8.18324 36.7993 5.92082 37.7364 4.25269 39.4041C2.58456 41.0718 1.64746 43.3336 1.64746 45.6921V75.7617H25.3148"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M99.7093 89.7221H104.107V64.858C104.11 64.4135 104.025 63.9729 103.856 63.5616C103.688 63.1502 103.44 62.7761 103.127 62.4609C102.813 62.1457 102.441 61.8955 102.03 61.7248C101.62 61.5541 101.179 61.4663 100.735 61.4663H28.9439C28.0477 61.4715 27.1898 61.8312 26.5579 62.4666C25.926 63.1021 25.5713 63.9619 25.5713 64.858V89.7221H29.9893"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.028 75.7617H127.696L123.751 87.2573C123.512 87.9734 123.054 88.5963 122.442 89.0385C121.83 89.4806 121.094 89.7197 120.339 89.7221H99.709"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M29.9102 89.7221H8.98432C8.22917 89.7197 7.49377 89.4806 6.88167 89.0385C6.26958 88.5963 5.81166 87.9734 5.57232 87.2573L1.74609 75.7617H25.4134"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.2694 106.302H31.2119C30.8574 106.302 30.507 106.227 30.1836 106.082C29.8602 105.937 29.571 105.725 29.3347 105.461C29.0984 105.197 28.9204 104.886 28.8123 104.549C28.7041 104.211 28.6683 103.855 28.707 103.503L32.0402 73.6301C32.1039 73.0113 32.3956 72.4382 32.8587 72.0227C33.3217 71.6072 33.9228 71.379 34.545 71.3822H94.9165C95.5362 71.3876 96.1326 71.619 96.5938 72.0328C97.055 72.4467 97.3493 73.0147 97.4213 73.6301L100.735 103.503C100.773 103.852 100.738 104.205 100.633 104.539C100.527 104.874 100.352 105.183 100.12 105.446C99.8883 105.71 99.6038 105.922 99.2851 106.07C98.9664 106.217 98.6205 106.296 98.2694 106.302V106.302Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.029 54.3087C106.153 54.3087 107.875 52.5873 107.875 50.4637C107.875 48.3402 106.153 46.6188 104.029 46.6188C101.904 46.6188 100.183 48.3402 100.183 50.4637C100.183 52.5873 101.904 54.3087 104.029 54.3087Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9201 14.3602V36.7991H31.626V5.25064C31.626 4.31456 31.998 3.41701 32.66 2.7551C33.3221 2.09319 34.2201 1.72131 35.1564 1.72131H84.5817L98.9201 14.3602Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M84.5815 1.72131V14.3013H98.92" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path
+                                d="M31.6264 19.2705H29.8907C29.2018 19.2705 28.5197 19.406 27.8832 19.6696C27.2467 19.9332 26.6683 20.3196 26.1812 20.8066C25.694 21.2937 25.3075 21.8718 25.0438 22.5081C24.7802 23.1445 24.6445 23.8265 24.6445 24.5153V36.7994"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9199 19.2705H100.636C101.326 19.2679 102.011 19.4017 102.65 19.6641C103.288 19.9265 103.869 20.3124 104.358 20.7997C104.848 21.287 105.236 21.8659 105.501 22.5036C105.766 23.1412 105.902 23.8249 105.902 24.5153V36.7995"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M37.6812 75.6039H61.4471" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 83.6686H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 89.0713H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 94.4542H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <div class="business__area--item--title">
+                        THƯƠNG MẠI & DỊCH VỤ NGÀNH MÁY VĂN PHÒNG
+                    </div>
+                    <div class="business__area--item--image">
+                        <img src="./images/business.png" alt="" srcset="">
+                    </div>
+                    <div class="business__area--item--hover"></div>
+                </div>
+                <div class="business__area--item">
+                    <div class="business__area--item--top">
+                        <svg width="130" height="108" viewBox="0 0 130 108" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M104.028 75.7617H127.696V45.6921C127.696 43.3336 126.759 41.0718 125.091 39.4041C123.422 37.7364 121.16 36.7993 118.801 36.7993H10.5423C8.18324 36.7993 5.92082 37.7364 4.25269 39.4041C2.58456 41.0718 1.64746 43.3336 1.64746 45.6921V75.7617H25.3148"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M99.7093 89.7221H104.107V64.858C104.11 64.4135 104.025 63.9729 103.856 63.5616C103.688 63.1502 103.44 62.7761 103.127 62.4609C102.813 62.1457 102.441 61.8955 102.03 61.7248C101.62 61.5541 101.179 61.4663 100.735 61.4663H28.9439C28.0477 61.4715 27.1898 61.8312 26.5579 62.4666C25.926 63.1021 25.5713 63.9619 25.5713 64.858V89.7221H29.9893"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.028 75.7617H127.696L123.751 87.2573C123.512 87.9734 123.054 88.5963 122.442 89.0385C121.83 89.4806 121.094 89.7197 120.339 89.7221H99.709"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M29.9102 89.7221H8.98432C8.22917 89.7197 7.49377 89.4806 6.88167 89.0385C6.26958 88.5963 5.81166 87.9734 5.57232 87.2573L1.74609 75.7617H25.4134"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.2694 106.302H31.2119C30.8574 106.302 30.507 106.227 30.1836 106.082C29.8602 105.937 29.571 105.725 29.3347 105.461C29.0984 105.197 28.9204 104.886 28.8123 104.549C28.7041 104.211 28.6683 103.855 28.707 103.503L32.0402 73.6301C32.1039 73.0113 32.3956 72.4382 32.8587 72.0227C33.3217 71.6072 33.9228 71.379 34.545 71.3822H94.9165C95.5362 71.3876 96.1326 71.619 96.5938 72.0328C97.055 72.4467 97.3493 73.0147 97.4213 73.6301L100.735 103.503C100.773 103.852 100.738 104.205 100.633 104.539C100.527 104.874 100.352 105.183 100.12 105.446C99.8883 105.71 99.6038 105.922 99.2851 106.07C98.9664 106.217 98.6205 106.296 98.2694 106.302V106.302Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.029 54.3087C106.153 54.3087 107.875 52.5873 107.875 50.4637C107.875 48.3402 106.153 46.6188 104.029 46.6188C101.904 46.6188 100.183 48.3402 100.183 50.4637C100.183 52.5873 101.904 54.3087 104.029 54.3087Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9201 14.3602V36.7991H31.626V5.25064C31.626 4.31456 31.998 3.41701 32.66 2.7551C33.3221 2.09319 34.2201 1.72131 35.1564 1.72131H84.5817L98.9201 14.3602Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M84.5815 1.72131V14.3013H98.92" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path
+                                d="M31.6264 19.2705H29.8907C29.2018 19.2705 28.5197 19.406 27.8832 19.6696C27.2467 19.9332 26.6683 20.3196 26.1812 20.8066C25.694 21.2937 25.3075 21.8718 25.0438 22.5081C24.7802 23.1445 24.6445 23.8265 24.6445 24.5153V36.7994"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9199 19.2705H100.636C101.326 19.2679 102.011 19.4017 102.65 19.6641C103.288 19.9265 103.869 20.3124 104.358 20.7997C104.848 21.287 105.236 21.8659 105.501 22.5036C105.766 23.1412 105.902 23.8249 105.902 24.5153V36.7995"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M37.6812 75.6039H61.4471" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 83.6686H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 89.0713H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 94.4542H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <div class="business__area--item--title">
+                        THƯƠNG MẠI & DỊCH VỤ NGÀNH MÁY VĂN PHÒNG
+                    </div>
+                    <div class="business__area--item--image">
+                        <img src="./images/business.png" alt="" srcset="">
+                    </div>
+                    <div class="business__area--item--hover"></div>
+                </div>
+                <div class="business__area--item">
+                    <div class="business__area--item--top">
+                        <svg width="130" height="108" viewBox="0 0 130 108" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M104.028 75.7617H127.696V45.6921C127.696 43.3336 126.759 41.0718 125.091 39.4041C123.422 37.7364 121.16 36.7993 118.801 36.7993H10.5423C8.18324 36.7993 5.92082 37.7364 4.25269 39.4041C2.58456 41.0718 1.64746 43.3336 1.64746 45.6921V75.7617H25.3148"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M99.7093 89.7221H104.107V64.858C104.11 64.4135 104.025 63.9729 103.856 63.5616C103.688 63.1502 103.44 62.7761 103.127 62.4609C102.813 62.1457 102.441 61.8955 102.03 61.7248C101.62 61.5541 101.179 61.4663 100.735 61.4663H28.9439C28.0477 61.4715 27.1898 61.8312 26.5579 62.4666C25.926 63.1021 25.5713 63.9619 25.5713 64.858V89.7221H29.9893"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.028 75.7617H127.696L123.751 87.2573C123.512 87.9734 123.054 88.5963 122.442 89.0385C121.83 89.4806 121.094 89.7197 120.339 89.7221H99.709"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M29.9102 89.7221H8.98432C8.22917 89.7197 7.49377 89.4806 6.88167 89.0385C6.26958 88.5963 5.81166 87.9734 5.57232 87.2573L1.74609 75.7617H25.4134"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.2694 106.302H31.2119C30.8574 106.302 30.507 106.227 30.1836 106.082C29.8602 105.937 29.571 105.725 29.3347 105.461C29.0984 105.197 28.9204 104.886 28.8123 104.549C28.7041 104.211 28.6683 103.855 28.707 103.503L32.0402 73.6301C32.1039 73.0113 32.3956 72.4382 32.8587 72.0227C33.3217 71.6072 33.9228 71.379 34.545 71.3822H94.9165C95.5362 71.3876 96.1326 71.619 96.5938 72.0328C97.055 72.4467 97.3493 73.0147 97.4213 73.6301L100.735 103.503C100.773 103.852 100.738 104.205 100.633 104.539C100.527 104.874 100.352 105.183 100.12 105.446C99.8883 105.71 99.6038 105.922 99.2851 106.07C98.9664 106.217 98.6205 106.296 98.2694 106.302V106.302Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.029 54.3087C106.153 54.3087 107.875 52.5873 107.875 50.4637C107.875 48.3402 106.153 46.6188 104.029 46.6188C101.904 46.6188 100.183 48.3402 100.183 50.4637C100.183 52.5873 101.904 54.3087 104.029 54.3087Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9201 14.3602V36.7991H31.626V5.25064C31.626 4.31456 31.998 3.41701 32.66 2.7551C33.3221 2.09319 34.2201 1.72131 35.1564 1.72131H84.5817L98.9201 14.3602Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M84.5815 1.72131V14.3013H98.92" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path
+                                d="M31.6264 19.2705H29.8907C29.2018 19.2705 28.5197 19.406 27.8832 19.6696C27.2467 19.9332 26.6683 20.3196 26.1812 20.8066C25.694 21.2937 25.3075 21.8718 25.0438 22.5081C24.7802 23.1445 24.6445 23.8265 24.6445 24.5153V36.7994"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9199 19.2705H100.636C101.326 19.2679 102.011 19.4017 102.65 19.6641C103.288 19.9265 103.869 20.3124 104.358 20.7997C104.848 21.287 105.236 21.8659 105.501 22.5036C105.766 23.1412 105.902 23.8249 105.902 24.5153V36.7995"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M37.6812 75.6039H61.4471" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 83.6686H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 89.0713H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 94.4542H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <div class="business__area--item--title">
+                        THƯƠNG MẠI & DỊCH VỤ NGÀNH MÁY VĂN PHÒNG
+                    </div>
+                    <div class="business__area--item--image">
+                        <img src="./images/business.png" alt="" srcset="">
+                    </div>
+                    <div class="business__area--item--hover"></div>
+                </div>
+                <div class="business__area--item">
+                    <div class="business__area--item--top">
+                        <svg width="130" height="108" viewBox="0 0 130 108" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M104.028 75.7617H127.696V45.6921C127.696 43.3336 126.759 41.0718 125.091 39.4041C123.422 37.7364 121.16 36.7993 118.801 36.7993H10.5423C8.18324 36.7993 5.92082 37.7364 4.25269 39.4041C2.58456 41.0718 1.64746 43.3336 1.64746 45.6921V75.7617H25.3148"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M99.7093 89.7221H104.107V64.858C104.11 64.4135 104.025 63.9729 103.856 63.5616C103.688 63.1502 103.44 62.7761 103.127 62.4609C102.813 62.1457 102.441 61.8955 102.03 61.7248C101.62 61.5541 101.179 61.4663 100.735 61.4663H28.9439C28.0477 61.4715 27.1898 61.8312 26.5579 62.4666C25.926 63.1021 25.5713 63.9619 25.5713 64.858V89.7221H29.9893"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.028 75.7617H127.696L123.751 87.2573C123.512 87.9734 123.054 88.5963 122.442 89.0385C121.83 89.4806 121.094 89.7197 120.339 89.7221H99.709"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M29.9102 89.7221H8.98432C8.22917 89.7197 7.49377 89.4806 6.88167 89.0385C6.26958 88.5963 5.81166 87.9734 5.57232 87.2573L1.74609 75.7617H25.4134"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.2694 106.302H31.2119C30.8574 106.302 30.507 106.227 30.1836 106.082C29.8602 105.937 29.571 105.725 29.3347 105.461C29.0984 105.197 28.9204 104.886 28.8123 104.549C28.7041 104.211 28.6683 103.855 28.707 103.503L32.0402 73.6301C32.1039 73.0113 32.3956 72.4382 32.8587 72.0227C33.3217 71.6072 33.9228 71.379 34.545 71.3822H94.9165C95.5362 71.3876 96.1326 71.619 96.5938 72.0328C97.055 72.4467 97.3493 73.0147 97.4213 73.6301L100.735 103.503C100.773 103.852 100.738 104.205 100.633 104.539C100.527 104.874 100.352 105.183 100.12 105.446C99.8883 105.71 99.6038 105.922 99.2851 106.07C98.9664 106.217 98.6205 106.296 98.2694 106.302V106.302Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M104.029 54.3087C106.153 54.3087 107.875 52.5873 107.875 50.4637C107.875 48.3402 106.153 46.6188 104.029 46.6188C101.904 46.6188 100.183 48.3402 100.183 50.4637C100.183 52.5873 101.904 54.3087 104.029 54.3087Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9201 14.3602V36.7991H31.626V5.25064C31.626 4.31456 31.998 3.41701 32.66 2.7551C33.3221 2.09319 34.2201 1.72131 35.1564 1.72131H84.5817L98.9201 14.3602Z"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M84.5815 1.72131V14.3013H98.92" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path
+                                d="M31.6264 19.2705H29.8907C29.2018 19.2705 28.5197 19.406 27.8832 19.6696C27.2467 19.9332 26.6683 20.3196 26.1812 20.8066C25.694 21.2937 25.3075 21.8718 25.0438 22.5081C24.7802 23.1445 24.6445 23.8265 24.6445 24.5153V36.7994"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path
+                                d="M98.9199 19.2705H100.636C101.326 19.2679 102.011 19.4017 102.65 19.6641C103.288 19.9265 103.869 20.3124 104.358 20.7997C104.848 21.287 105.236 21.8659 105.501 22.5036C105.766 23.1412 105.902 23.8249 105.902 24.5153V36.7995"
+                                stroke="#C4C4C4" stroke-width="2" stroke-miterlimit="10" />
+                            <path d="M37.6812 75.6039H61.4471" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 83.6686H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 89.0713H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                            <path d="M39.811 94.4542H89.7294" stroke="#C4C4C4" stroke-width="2"
+                                stroke-miterlimit="10" />
+                        </svg>
+                    </div>
+                    <div class="business__area--item--title">
+                        THƯƠNG MẠI & DỊCH VỤ NGÀNH MÁY VĂN PHÒNG
+                    </div>
+                    <div class="business__area--item--image">
+                        <img src="./images/business.png" alt="" srcset="">
+                    </div>
+                    <div class="business__area--item--hover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+</body>
+
+</html>
