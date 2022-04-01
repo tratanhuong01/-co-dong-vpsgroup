@@ -1,6 +1,10 @@
 .business__area {
     margin-top: -3rem;
     margin-left: 24.6rem;
+    @include max-ss(1440px) {
+        margin-left: 0rem;
+        padding: 0rem 8rem;
+    }
     margin-bottom: 3rem;
     @include flexJustifyAlign(flex-start, center);
     &--left {
@@ -11,7 +15,7 @@
             font-size: 4rem;
             line-height: 6.1rem;
             &--dark {
-                color: $color-gray;
+                color: $color-gray-bold;
             }
             &--light {
                 color: $color-red-bold;
@@ -74,7 +78,7 @@
         &::before {
             content: "";
             position: absolute;
-            width: 18.323rem;
+            width: 50%;
             left: 50%;
             transform: translateX(-50%);
             background-color: $color-red-bold;
@@ -94,6 +98,38 @@
             padding: calc(1.032rem / 2) 0rem;
             height: 1.032rem;
             transform-origin: top;
+            transition: transform 1s;
+            &--container {
+                position: absolute;
+                z-index: 888;
+                bottom: 1.2rem;
+                opacity: 0;
+                left: 0;
+                transition: opacity 0.6s;
+            }
+            &--more {
+                margin-bottom: 5.1rem;
+                padding-left: 4.1rem;
+                @include flexJustifyAlign(flex-start,center);
+                gap: 1.5rem;
+                span {
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 1.8rem;
+                    line-height: 2.8rem;
+                    color: #ffffff;
+                }
+            }
+            &--yellow  {
+                @include flexJustifyAlign(center,center);
+                width: 250%;
+                div {
+                    width: 16.3rem;
+                    height: 1.1rem;
+                    margin: 0rem auto 1.2rem auto;
+                    background-color: #FFEF00;
+                }
+            }
         }
         &:hover {
             &::before {
@@ -104,16 +140,19 @@
             width: 100%;
             top: 0;
             left: 0;
-            bottom: 0;
-            right: 0;
-            transform: scale(1);
-            left: 0;
-            height: 100rem;
+            transform: scaleY(1);
+            height: 66rem;
             z-index: -100;
-            transition: transform 1s;
+        }
+        &:hover &--hover--container {
+            opacity: 1;
+            transition: all 0.6s;
         }
         &:hover &--title {
             color: #ffffff;
+        }
+        &:hover &--top {
+            background-size: 100% 100%;
         }
         position: relative;
         width: 40.6rem;
@@ -121,13 +160,14 @@
         flex-shrink: 0;
         &--top {
             padding: 8.772rem 0rem;
-            background: linear-gradient(to right, #c4c4c4 2px, transparent 2px) 0 0,
-                linear-gradient(to left, #c4c4c4 2px, transparent 2px) 100% 0,
-                linear-gradient(to bottom, #c4c4c4 2px, transparent 2px) 0 0,
-                linear-gradient(to bottom, #c4c4c4 2px, transparent 2px) 100% 0;
+            background: linear-gradient(to right, #c4c4c4 0.1rem, transparent 0.1rem) 0 0,
+                linear-gradient(to left, #c4c4c4 0.1rem, transparent 0.1rem) 100% 0,
+                linear-gradient(to bottom, #c4c4c4 0.1rem, transparent 0.1rem) 0 0,
+                linear-gradient(to bottom, #c4c4c4 0.1rem, transparent 0.1rem) 100% 0;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: 25% 100%;
             @include flexJustifyAlign(center, center);
+            transition: background-size 1s;
         }
         &--title {
             position: relative;
@@ -144,10 +184,32 @@
             color: $color-red-bold;
         }
         &--image {
+            position: relative;
+            z-index: -100;
             padding: 3.226rem;
             img {
                 width: 100%;
             }
+        }
+    }
+}
+
+
+.business-area {
+    width: 100%;
+    display: flex;
+    height: 91.9rem;
+    &__item {
+        width: 25%;
+        position: relative;
+        &--hover {
+            background: linear-gradient(14.18deg, #B60000 1.39%, rgba(182, 0, 0, 0) 104.85%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
         }
     }
 }

@@ -4,6 +4,10 @@ html {
   font-family: "roboto";
 }
 
+*:focus {
+  outline: none;
+}
+
 body {
   font-size: 1.6rem;
 }

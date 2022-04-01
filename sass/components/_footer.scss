@@ -1,0 +1,110 @@
+.footer {
+    &__top {
+        @include min-lg {
+            @include flexJustifyAlign(space-between, center);
+        }
+        &--right {
+            @include min-md {
+                padding-top: 1rem;
+            }
+            @include min-md {
+                @include flexJustifyAlign(flex-start, center);
+            }
+            @include min-lg {
+                @include flexJustifyAlign(flex-end, center);
+            }
+            &--socical {
+                @include min-md {
+                    @include flexJustifyAlign(center, center);
+                }
+                div {
+                    @include max-md {
+                        @include flexJustifyAlign(flex-start,center);
+                        gap: 2rem;
+                    }
+                    @include min-md {
+                        @include flexJustifyAlign(center, center);
+                    }
+                }
+                span {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 2.2rem;
+                    line-height: 4rem;
+                    color: $color-gray-bold;
+                }
+                ul {
+                    display: flex;
+                    @include min-md {
+                        padding-left: 1.5rem;
+                        padding-right: 4.15rem;
+                        @include flexJustifyAlign(center, center);
+                    }
+                    gap: 0.959rem;
+                    li {
+                        width: 3.2rem;
+                        width: 3.2rem;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            &--main {
+                @include flexJustifyAlign(center, center);
+                input {
+                    @include min-md {
+                        width: 40.2rem;
+                    }
+                    @include max-md {
+                        width: 20.2rem;
+                    }
+                    height: 4.7rem;
+                    border-radius: 0.6rem;
+                    border: 0.1rem solid #ffcbcb;
+                }
+                button {
+                    background-color: $color-red-bold;
+                    border: 0.1rem solid $color-red-bold;
+                    height: 4.7rem;
+                    width: 6.5rem;
+                    @include flexJustifyAlign(center, center);
+                    border-radius: 0rem 0.6rem 0.6rem 0rem;
+                }
+            }
+        }
+    }
+    &__end {
+        @include min-md {
+            display: flex;
+            justify-content: space-between;
+        }
+        margin-top: 4.8rem;
+        margin-bottom: 3rem;
+        &--item {
+            &--title {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2.2rem;
+                color: $color-red-bold;
+                line-height: 4rem;
+            }
+            &--border {
+                width: 2.5rem;
+                height: 2.5rem;
+                background: linear-gradient(to left, $color-gray-bold 2px, transparent 2px) 100% 0,
+                    linear-gradient(to left, $color-gray-bold 2px, transparent 2px) 100% 100%,
+                    linear-gradient(to bottom, $color-gray-bold 2px, transparent 2px) 100% 0;
+                background-repeat: no-repeat;
+                background-size: 100% 50%;
+                margin-left: -1rem;
+            }
+            div {
+                @include flexJustifyAlign(flex-start, center);
+                gap: 1.5rem;
+                margin-top: -0.5rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
