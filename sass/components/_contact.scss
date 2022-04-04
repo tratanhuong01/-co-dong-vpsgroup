@@ -1,0 +1,167 @@
+.contact {
+    @include min-ss(1500px) {
+        margin-left: 25.3rem;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__left {
+        padding-right: 13rem;
+        &--title {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4rem;
+            line-height: 5.2rem;
+            color: $color-red-bold;
+            margin-bottom: 4rem;
+            margin-top: 3.5rem;
+        }
+        &--input {
+            padding-left: 2.325rem;
+            width: 61.4rem;
+            background: rgba(196, 196, 196, 0.1);
+            border: 1px solid #EAEAEA;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 5.8rem;
+            margin-bottom: 1.828rem;
+            &::placeholder {
+                color: $color-gray;
+            }
+        }
+        &--textarea {
+            padding-left: 2.325rem;
+            width: 61.4rem;
+            resize: none;
+            border: 1px solid #EAEAEA;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 5.8rem;
+            color: $color-gray;
+            height: 20.7rem;
+            &::placeholder {
+                color: $color-gray;
+                font-family: "roboto";
+            }
+        }
+        &--button {
+            margin-top: 4.244rem;
+            width: 24.1rem;
+            height: 5rem;
+            @include flexJustifyAlign(center,center);
+            background-color: $color-red-bold;
+            border: 0.1rem solid $color-red-bold;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+            color: #FFFFFF;
+        }
+    }
+    &__right {
+        margin-top: 6rem;
+        padding-top: 4.8rem;
+        height: 83.7rem;
+        background-color: $color-red-bold;
+        flex: 1;
+        box-shadow: 0px -0.4rem 2.5rem rgba(0, 0, 0, 0.11);
+        &--child {
+            display: flex;
+            padding: 0rem 6.4rem;
+            &--item {
+                @include flexJustifyAlign(flex-start,center);
+                flex-direction: column;
+                &--light {
+                    width: 0.3rem;
+                    height: 2.5rem;
+                    background-color: white;
+                }
+                &--dark {
+                    background-color: $color-gray;
+                    width: 0.1rem;
+                    height: 21.4rem;
+                }
+            }
+            &--main {
+                flex: 1;
+                padding-left: 2.8rem;
+                padding-top: 3rem;
+                h3 {
+                    font-family: 'Oswald';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 4rem;
+                    line-height: 5.2rem;
+                    color: #FFFFFF;
+                }
+                h4 {
+                    font-style: normal;
+                    font-weight: 200;
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    color: #FFFFFF;
+                }
+                ul {
+                    padding-left: 8.6rem;
+                    margin-top: 4rem;
+                    li {
+                        padding-left: 2rem;
+                        padding-bottom: 0.8rem;
+                        margin-bottom: 2.4rem;
+                        display: flex;
+                        gap: 4rem;
+                        color: #FFFFFF;
+                        border-bottom: 0.1rem solid #FFEF00;
+                        p {
+                            font-style: normal;
+                            font-size: 1.6rem;
+                            line-height: 2rem;
+                            font-weight: 400;
+                            span {
+                                font-weight: 700;
+                            }
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+            }
+        }
+        &--content {
+            &--title {
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 4rem;
+                line-height: 5.2rem;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &__footer {
+        padding: 12.6rem 0rem;
+        @include min-ss(1500px) {
+            margin: 0rem 25.3rem;
+        }
+        &--title {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 4rem;
+            line-height: 5.2rem;
+            text-align: center;
+            color: $color-red-bold;
+            margin-bottom: 2.47rem;
+        }
+        &--map {
+            text-align: center;
+            iframe {
+                width: 110.1rem;
+                height: 54.2rem;
+            }
+        }
+    }
+}

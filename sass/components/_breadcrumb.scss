@@ -1,0 +1,28 @@
+.breadcrumb {
+    @include min-ss(1500px) {
+        margin: 2.2rem 25.4rem 5.7rem 25.4rem;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1rem;
+        li {
+            border-right: 0.1rem solid $color-red-bold;
+            padding-right: 2rem;
+            padding-left: 1rem;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 4rem;
+            a {
+                color: $color-gray-bold;
+            }
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+    &__active {
+       color: $color-red-bold !important;
+    }
+}

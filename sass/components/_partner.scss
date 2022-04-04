@@ -1,15 +1,23 @@
 .partner {
+    &__wrapper {
+        margin-top: -0.8rem !important;
+        max-width: 1312px;
+        margin: auto;
+    }
     position: relative;
     width: calc(100% - 10rem);
     height: 13rem;
     margin: auto;
-    margin-bottom: 15.8rem;
+    @include min-md {
+        margin-bottom: 15.8rem;
+    }
+    margin-bottom: 7.9rem;
     &__button {
         @include max-lg {
             display: none;
         }
         position: absolute;
-        top: 50%;
+        top: 35%;
         transform: translateX(-50%);
         z-index: 50;
         width: 4rem;
@@ -18,10 +26,10 @@
         border: 0.1rem solid $color-gray;
         @include flexJustifyAlign(center,center);
         &--left {
-            left: -3rem;
+            left: -2.5rem;
         }
         &--right {
-            right: -7rem;
+            right: -7.5rem;
         }
         &:hover svg {
             transform: scale(1.3);
@@ -34,13 +42,19 @@
         }
     }
     &__content {
+        height: 100%;
+        margin-top: 2.6rem;
         border: 0.1rem solid #838383;
+        margin-left: 1rem;
+        overflow: hidden;
         @include flexJustifyAlign(space-around,center);
         li {
             width: 20%;
             @include flexJustifyAlign(center,center);
             a {
                 img {
+                    width: 100%;
+                    height: 100%;
                    filter: grayscale(100%);
                    object-fit: contain;
                    &:hover {

@@ -70,6 +70,9 @@
         }
     }
     &__main {
+        @include min-ss(1500px) {
+            margin-left: 1.65rem;
+        }
         h1 {
             font-family: "Oswald";
             font-style: normal;

@@ -14,11 +14,262 @@
 #modal {
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     background-color: rgba(0, 0, 0, 0.411);
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -100;
+    transition: opacity 0.2s;
+}
+.modal {
+    &__active {
+        visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 100 !important;
+    }
+}
+
+.banner-small {
+    width: 100%;
+    height: 41.1rem;
+    position: relative;
+    &__ground {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(360deg, $color-red-bold 5.89%, rgba(182, 0, 0, 0) 100%);
+        transform: rotate(-180deg);
+        &--content {
+            border: 0.1rem solid #FFFFFF;
+            @include flexJustifyAlign(center,center);
+            width: calc(100% - 5.2rem);
+            margin: 0 auto;
+            height: calc(100% - 2.6rem);
+            transform: translateY(2.6rem);
+            h3 {
+                padding-top: 2.8rem;
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 8rem;
+                line-height: 4rem;
+                transform: rotate(-180deg);
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+        
+    }
+}
+
+.catelog {
+    padding-top: 3rem;
+    display: flex;
+    gap: 4.4rem;
+    transform: translateX(1.2rem);
+    @include min-ss(1500px) {
+        margin: 0.8rem 24rem 3rem 24rem;
+    }
+    &__item {
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, $color-red-bold 0.2rem, transparent 0.2rem) 0 0,
+            linear-gradient(to left,  $color-red-bold 0.24rem,transparent 0.2rem) 100% 100%,
+            linear-gradient(to bottom,  $color-red-bold 0.2rem, transparent 0.2rem) 0 0,
+            linear-gradient(to top,  $color-red-bold 0.19rem, transparent 0.2rem) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 4% 12%;
+            transform: scale(1.08,1.2);
+        }
+        & , &::before, &--main h3 {
+            transition: all .3s;
+        }
+        &:hover {
+            &::before {
+                background-size: 50% 50%;
+            }
+        }
+        &:hover {
+            border: 1px solid $color-red-bold;
+        }
+        &:hover &--main {
+            background-color: $color-red-bold;
+            & h3 {
+                color: #FFFFFF;
+            }
+        }
+        width: 32.1rem;
+        margin-top: -0.2rem;
+        border: 1px solid rgba(182, 0, 0, 0.15);
+        &--main {
+            margin: 0.59rem;
+            height: calc(8.6rem - 0.59rem);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                text-align: center;
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                color: #838383;
+            }
+        }
+    }
+    &__item--active {
+        &::before {
+            background-size: 57% 50% !important;
+        }
+        border: 0.1rem solid $color-red-bold !important;
+    }
+    &__item--active &__item {
+        &--main {
+            background-color: $color-red-bold !important;
+            h3 {
+                color: #FFFFFF !important;
+            }
+        }
+    }
+}
+
+.catelog-five {
+    padding-top: 3rem;
+    display: flex;
+    gap: 6.4rem;
+    transform: translateX(1.2rem);
+    @include min-ss(1500px) {
+        margin: 0.8rem 23.8rem 3rem 22.8rem;
+    }
+    &__item {
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, $color-red-bold 0.2rem, transparent 0.2rem) 0 0,
+            linear-gradient(to left,  $color-red-bold 0.24rem,transparent 0.2rem) 100% 100%,
+            linear-gradient(to bottom,  $color-red-bold 0.2rem, transparent 0.2rem) 0 0,
+            linear-gradient(to top,  $color-red-bold 0.19rem, transparent 0.2rem) 100% 100%;
+            background-repeat: no-repeat;
+            background-size: 4% 12%;
+            transform: scale(1.08,1.2);
+        }
+        & , &::before, &--main h3 {
+            transition: all .6s;
+        }
+        &:hover {
+            &::before {
+                background-size: 50% 50%;
+            }
+        }
+        &:hover {
+            border: 1px solid $color-red-bold;
+        }
+        &:hover &--main {
+            background-color: $color-red-bold;
+            & h3 {
+                color: #FFFFFF;
+            }
+        }
+        width: 25.1rem;
+        margin-top: -0.2rem;
+        border: 1px solid rgba(182, 0, 0, 0.15);
+        &--main {
+            margin: 0.59rem;
+            padding: 2.4rem 0rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            h3 {
+                text-align: center;
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 2.4rem;
+                line-height: 2.8rem;
+                color: #838383;
+            }
+        }
+    }
+    &__item--active {
+        &::before {
+            background-size: 57% 50% !important;
+        }
+        border: 0.1rem solid $color-red-bold !important;
+    }
+    &__item--active &__item {
+        &--main {
+            background-color: $color-red-bold !important;
+            h3 {
+                color: #FFFFFF !important;
+            }
+        }
+    }
+}
+
+.box-title {
+    padding: 3rem 0rem;
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4rem;
+    border: 0.1rem solid $color-red-bold;
+    color: $color-red-bold;
+    text-align: center;
+}
+
+.support {
+    margin: 12rem 22.8rem 14rem 22.8rem;
+    border: 0.1rem solid $color-red-bold;
+    &__title {
+        margin-top: 2.959rem;
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        margin-bottom: 6.6rem;
+        color: $color-red-bold;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        margin: 0 auto 1.6rem auto;
+        &--item {
+            width: 50%;
+            @include flexJustifyAlign(flex-start,center);
+            gap: 2.03rem;
+            margin-bottom: 2.4rem;
+            p {
+                color: $color-gray-bold;
+                font-style: normal;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                span {
+                    font-weight: 700;
+                    color: #000000;
+                }
+            }
+        }
+    }
 }

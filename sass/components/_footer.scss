@@ -1,7 +1,12 @@
 .footer {
+    max-width: 1290px;
+    margin: auto;
     &__top {
         @include min-lg {
             @include flexJustifyAlign(space-between, center);
+        }
+        &--image {
+            transform: translateX(-3.2rem);
         }
         &--right {
             @include min-md {
@@ -21,6 +26,10 @@
                     @include max-md {
                         @include flexJustifyAlign(flex-start,center);
                         gap: 2rem;
+                    }
+                    @include max-ss(450px) {
+                        margin-top: 1rem;
+                        flex-direction: column;
                     }
                     @include min-md {
                         @include flexJustifyAlign(center, center);
@@ -78,6 +87,7 @@
         @include min-md {
             display: flex;
             justify-content: space-between;
+            transform: translateX(1.2rem);
         }
         margin-top: 4.8rem;
         margin-bottom: 3rem;
@@ -101,10 +111,14 @@
             }
             div {
                 @include flexJustifyAlign(flex-start, center);
-                gap: 1.5rem;
+                gap: 1.8rem;
                 margin-top: -0.5rem;
                 margin-bottom: 1.5rem;
             }
         }
     }
+}
+
+.clear-both {
+    padding: 1.6rem;
 }

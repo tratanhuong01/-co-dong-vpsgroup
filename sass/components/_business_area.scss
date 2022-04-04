@@ -1,14 +1,40 @@
 .business__area {
+    // &-- {
+    //     // overflow: hidden;
+    // }
     margin-top: -3rem;
-    margin-left: 24.6rem;
-    @include max-ss(1440px) {
-        margin-left: 0rem;
-        padding: 0rem 8rem;
-    }
+    margin-left: -1rem;
     margin-bottom: 3rem;
-    @include flexJustifyAlign(flex-start, center);
+    @include min-lg {
+        margin-bottom: 19rem;
+    }
+    &--container {
+        @include max-ss(1440px) {
+            padding: 0rem 3rem 0rem 6rem;
+        }
+        @include min-xl {
+            padding: 0rem 3rem 0rem 6rem;
+        }
+        @include flexJustifyAlign(flex-start, center);
+        transition: margin-left 1s;
+        overflow: scroll;
+        @include min-xl {
+            height: 67.5rem;
+        }
+    }
+    &--main {
+        margin-left: 24.6rem;
+        @include max-ss(1440px) {
+            margin-left: 0rem;
+        }
+    }
     &--left {
+        width: 28.6rem;
+        margin-top: 6rem;
+        flex-shrink: 0;
         &--top {
+            margin-top: -8.5rem;
+            transform: translateY(6.5rem);
             font-family: "Oswald";
             font-style: normal;
             font-weight: 400;
@@ -22,38 +48,43 @@
             }
         }
         &--center {
+            transform: translateY(6rem);
             @include flexJustifyAlign(flex-start, center);
-            margin-left: -5.5rem;
-            margin-top: -1rem;
+            margin-left: -5.2rem;
+            margin-top: -4rem;
+            padding-top: 2.8rem;
             svg {
                 margin-right: 0.3rem;
             }
             &--light {
                 display: block;
                 background-color: $color-red-bold;
-                width: 2rem;
+                width: 1.9rem;
                 height: 0.3rem;
             }
             &--dark {
                 display: block;
                 background-color: $color-gray;
-                width: 2rem;
-                height: 0.2rem;
+                width: 3rem;
+                height: 0.1rem;
             }
         }
         &--title {
-            margin-top: 2.181rem;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            padding-bottom: 4rem;
             font-style: normal;
             font-weight: 300;
             font-size: 1.6rem;
             line-height: 2.6rem;
-            max-width: 28.7rem;
+            width: 29rem;
+            text-align: left;
             color: $color-gray-bold;
         }
         &--footer {
             @include flexJustifyAlign(flex-start, center);
-            gap: 1.312rem;
-            margin-top: 2.4rem;
+            gap: 1rem;
+            margin-left: 0.5rem;
             span {
                 font-style: normal;
                 font-weight: 300;
@@ -66,7 +97,7 @@
     &--wrapper-- {
         padding-top: 3rem;
         flex: 1;
-        overflow: hidden;
+        overflow: scroll;
     }
     &--content {
         width: 100%;
@@ -74,31 +105,34 @@
         display: flex;
     }
     &--item {
+        // @include min-xl {
+        //     margin-top: -12rem;
+        // }
         padding: 0.7rem;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: $color-red-bold;
-            top: 0.516rem;
-            z-index: 100;
-            height: 1.032rem;
-        }
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 50%;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     background-color: $color-red-bold;
+        //     top: 0.516rem;
+        //     z-index: 100;
+        //     height: 1.032rem;
+        // }
         &--hover {
             position: absolute;
-            width: 50%;
-            left: 0;
+            width: 45%;
+            left: 50%;
             top: 0;
-            transform: scaleY(0);
+            transform: translateX(-50%);
             background-color: $color-red-bold;
-            top: 0.516rem;
-            z-index: 5;
+            top: 0.35rem;
+            z-index: 10;
             padding: calc(1.032rem / 2) 0rem;
             height: 1.032rem;
             transform-origin: top;
-            transition: transform 1s;
+            transition: all 1s;
             &--container {
                 position: absolute;
                 z-index: 888;
@@ -141,7 +175,7 @@
             top: 0;
             left: 0;
             transform: scaleY(1);
-            height: 66rem;
+            height: 68rem;
             z-index: -100;
         }
         &:hover &--hover--container {
@@ -178,7 +212,8 @@
             font-size: 2.7rem;
             line-height: 4.8rem;
             display: flex;
-            padding: 0rem 3.226rem;
+            transform: translateY(-1.2em);
+            padding: 0rem 2.226rem;
             align-items: center;
             text-align: center;
             color: $color-red-bold;
@@ -186,7 +221,8 @@
         &--image {
             position: relative;
             z-index: -100;
-            padding: 3.226rem;
+            transform: translateY(4rem);
+            padding: 2.226rem;
             img {
                 width: 100%;
             }
@@ -194,22 +230,148 @@
     }
 }
 
-
 .business-area {
     width: 100%;
     display: flex;
-    height: 91.9rem;
+    flex-wrap: wrap;
+    margin-bottom: 7.2rem;
+    @include max-xl {
+    }
+    @include min-xl {
+        height: 91.9rem;
+    }
     &__item {
-        width: 25%;
+        overflow: hidden;
+        cursor: pointer;
+        @include min-ss(1140px) {
+            width: 25%;
+        }
+        @include max-lg {
+            width: 50%;
+        }
+        @include max-sm {
+            width: 100%;
+        }
         position: relative;
+        height: 100%;
+        &--image {
+            width: 100%;
+            height: 100%;
+            // object-fit: cover;
+        }
         &--hover {
             background: linear-gradient(14.18deg, #B60000 1.39%, rgba(182, 0, 0, 0) 104.85%);
             position: absolute;
+            transform: scale(0);
+            transform-origin: bottom left;
             top: 0;
             left: 0;
             bottom: 0;
             right: 0;
-            z-index: 1;
+            transition: all 0.3s;
+        }
+        &:hover &--hover {
+            transform: scale(1);
+        }
+        &:hover &--content {
+            &--title {
+                margin-top: 0rem;
+                margin-bottom: 0rem;
+            }
+            &--info {
+                display: flex;
+                transform: scale(1);
+            }
+            &--end {
+                display: block;
+            }
+        }
+        &--content {
+            z-index: 20;
+            @include flexJustifyAlign(center,flex-end);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            bottom: 0;
+            right: 0;
+            &--top {
+                text-align: center;
+                svg {
+                    width: 9.769rem;
+                    height: 7.844rem;
+                }
+                transition: all 0.3s;
+            }
+            &--title {
+                height: 11.7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Oswald';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2.7rem;
+                line-height: 4.8rem;
+                color: #FFFFFF;
+                margin: auto;
+                max-width: 26rem;
+                text-align: center;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                margin-top: 7.156rem;
+                margin-bottom: 5.281rem;
+                transition: all 0.3s;
+            }
+            &--info {
+                display: none;
+                padding: 0rem 4.3rem;
+                height: 11.7rem;
+                align-items: center;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.6rem;
+                text-align: justify;
+                color: #ffffff;
+                transform: scale(0);
+                line-height: 2.6rem;
+                transition: all 0.3s;
+            }
+            &--end {
+                @include min-ss(1100px) {
+                    margin-top: 1rem;
+                }
+                @include min-ss(1200px) {
+                    margin-top: 0rem;
+                }
+                display: none;
+                text-align: center;
+                color: #ffffff;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                margin-bottom: 2.084rem;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.business-area-detail {
+    @include min-ss(1500px) {
+        margin: 2.9rem 23.8rem 0rem 23.8rem;
+    }
+    &__title {
+        font-family: 'Oswald';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 8rem;
+        color: $color-gray-bold;
+        &--main {
+            padding: 7rem 0rem 4rem 0rem;
+        }
+        &--child {
+            padding: 6.4rem 0rem;
         }
     }
 }

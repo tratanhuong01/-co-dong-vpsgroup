@@ -12,6 +12,7 @@
     &__footer {
         @include flexJustifyAlign(center, center);
         transform: translateY(-50%);
+        margin-top: 0.7rem;
         span {
             display: block;
             transform: matrix(-1, 0, 0, 1, 0, 0);

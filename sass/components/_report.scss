@@ -1,7 +1,13 @@
 .report {
-    margin-bottom: 13.2rem;
+    @include min-md {
+        margin-bottom: 13.2rem;
+    }
+    overflow: hidden;
+    // padding-top: 2.8rem;
+    margin-bottom: 6.6rem;
     height: max-content;
     @include max-lg {
+        padding-right: 1rem;
         // background-image: none !important;
     }
     @include min-lg {
@@ -18,17 +24,20 @@
         mix-blend-mode: overlay;
     }
     &__content {
-        z-index: 99;
+        margin-top: -5rem;
         @include min-lg {
             position: absolute;
         }
         width: 100%;
+        margin-left: 1.9rem;
         height: 100%;
         &--top {
-            padding-top: 7rem;
+            padding-top: 9rem;
+            transform: translate(-1.8rem,2rem);
             padding-bottom: 6.6rem;
         }
         &--main {
+            margin-left: -3rem;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -36,7 +45,7 @@
         }
         &--item-- {
             @include min-xl {
-                width: calc(25% - 3.3rem);
+                width: calc(32.8rem);
             }
             @include max-xl {
                 width: calc((100% / 3) - 3.3rem);
@@ -50,10 +59,10 @@
         }
         &--item {
             position: relative;
-            height: 19.8rem;
+            height: 19.6rem;
             &:hover &--main {
                 opacity: 1;
-                transform: scaleY(1.4);
+                transform: scaleY(1.39);
             }
             &:hover &--top {
                 margin-top: -4rem;
@@ -62,7 +71,13 @@
                 margin-top: 12.5rem;
             }
             &:hover &--arrow {
+                opacity: 1;
                 height: 3.8rem;
+                div {
+                    &::before {
+                        display: block;
+                    }
+                }
             }
             &--arrow {
                 position: absolute;
@@ -72,30 +87,33 @@
                 width: 24rem;
                 margin-left: -2rem;
                 height: 0rem;
-                overflow: hidden;
-                transition: height 0.4s;
+                opacity: 0;
+                transition: opacity 0.8s;
                 background-color: $color-red-bold;
-                @include flexJustifyAlign(center,center);
-                gap: 1rem;
-                span {
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 1.8rem;
-                    line-height: 2.8rem;
-                    color: #ffffff !important;
+                div {
+                    height: 3.8rem;
+                    @include flexJustifyAlign(center,center);
+                    gap: 1rem;
+                    span {
+                        font-style: normal;
+                        font-weight: 300;
+                        font-size: 1.8rem;
+                        line-height: 2.8rem;
+                        color: #ffffff !important;
+                    }
+                    &::before {
+                        content:"";
+                        position: absolute;
+                        border-bottom: 19px solid transparent;
+                        border-left: 19px solid $color-red-bold;
+                        border-top: 19px solid transparent;
+                        height: 0px;
+                        width: 0px;
+                        overflow: hidden;
+                        right: -19px;
+                        display: none;
+                    }
                 }
-                // &::after {
-                //     content: "";
-                //     width: 0;
-                //     height: 0;
-                //     right: 100%;
-                //     display: inline-block;
-                //     width: 0;
-                //     height: 0;
-                //     border-top: 20px solid #FFEF00;
-                //     border-bottom: 20px solid #FFEF00;
-                //     border-left: 20px solid $color-red-bold;
-                // }
             }
             &--main {
                 transform-origin: 50% 50%;
@@ -136,11 +154,13 @@
                     font-style: normal;
                     font-weight: 400;
                     font-size: 4rem;
+                    transform: translateY(-0.2rem);
                     line-height: 4rem;
                     color: $color-red-bold;
                 }
                 &--right {
                     p {
+                        transform: translate(-1rem,-0.8rem);
                         text-align: center;
                         line-height: 2.4rem;
                         font-style: normal;
@@ -167,7 +187,7 @@
                 transition: all 0.5s;
                 position: relative;
                 z-index: 100;
-                margin-top: 5.5rem;
+                margin-top: 5rem;
                 @include flexJustifyAlign(space-between,center);
                 text-align: center;
                 li {
@@ -191,6 +211,7 @@
         }
     }
     &__footer {
+        margin-left: -2.2rem;
         padding: 5.3rem 0rem 10.3rem 0rem;
         a {
             cursor: pointer;
