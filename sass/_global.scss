@@ -9,6 +9,9 @@
     @include max-ss(1440px) {
         padding: 0rem 2rem;
     }
+    @include max-sm {
+        padding: 0rem 1rem;
+    }
 }
 
 #modal {
@@ -23,6 +26,7 @@
     z-index: -100;
     transition: opacity 0.2s;
 }
+
 .modal {
     &__active {
         visibility: visible !important;
@@ -33,7 +37,10 @@
 
 .banner-small {
     width: 100%;
-    height: 41.1rem;
+    height: 21.1rem;
+    @include min-lg {
+        height: 41.1rem;
+    }
     position: relative;
     &__ground {
         width: 100%;
@@ -46,17 +53,26 @@
         &--content {
             border: 0.1rem solid #FFFFFF;
             @include flexJustifyAlign(center,center);
-            width: calc(100% - 5.2rem);
+            width: calc(100% - 2rem);
             margin: 0 auto;
-            height: calc(100% - 2.6rem);
-            transform: translateY(2.6rem);
+            height: calc(100% - 1rem);
+            transform: translateY(1rem);
+            @include min-lg {
+                width: calc(100% - 5.2rem);
+                margin: 0 auto;
+                height: calc(100% - 2.6rem);
+                transform: translateY(2.6rem);
+            }
             h3 {
                 padding-top: 2.8rem;
                 font-family: 'Oswald';
                 font-style: normal;
                 font-weight: 500;
-                font-size: 8rem;
-                line-height: 4rem;
+                font-size: 4rem;
+                @include min-lg {
+                    font-size: 8rem;
+                    line-height: 4rem;
+                }
                 transform: rotate(-180deg);
                 text-align: center;
                 color: #FFFFFF;
@@ -70,9 +86,12 @@
     padding-top: 3rem;
     display: flex;
     gap: 4.4rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: -3rem;
     transform: translateX(1.2rem);
     @include min-ss(1500px) {
-        margin: 0.8rem 24rem 3rem 24rem;
+        margin: 0.8rem auto 3rem auto !important;
     }
     &__item {
         cursor: pointer;
@@ -146,12 +165,17 @@
 }
 
 .catelog-five {
+    margin-left: -2rem;
     padding-top: 3rem;
     display: flex;
-    gap: 6.4rem;
+    gap: 4.4rem;
+    @include max-xl {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     transform: translateX(1.2rem);
     @include min-ss(1500px) {
-        margin: 0.8rem 23.8rem 3rem 22.8rem;
+        margin: 0.8rem auto 3rem auto !important;
     }
     &__item {
         cursor: pointer;
@@ -189,6 +213,7 @@
             }
         }
         width: 25.1rem;
+        flex-shrink: 0;
         margin-top: -0.2rem;
         border: 1px solid rgba(182, 0, 0, 0.15);
         &--main {
@@ -225,20 +250,27 @@
 }
 
 .box-title {
-    padding: 3rem 0rem;
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 400;
-    font-size: 4rem;
-    line-height: 4rem;
+    padding: 1.5rem 0rem;
+    font-size: 2.4rem;
+    @include min-lg {
+        padding: 3rem 0rem;
+        font-size: 4rem;
+    }
+    line-height: 1;
     border: 0.1rem solid $color-red-bold;
     color: $color-red-bold;
     text-align: center;
 }
 
 .support {
-    margin: 12rem 22.8rem 14rem 22.8rem;
+    margin: 12rem auto 14rem auto;
     border: 0.1rem solid $color-red-bold;
+    @include max-lg {
+        padding: 0rem 2rem;
+    }
     &__title {
         margin-top: 2.959rem;
         font-family: 'Oswald';
@@ -251,12 +283,16 @@
         color: $color-red-bold;
     }
     &__content {
-        display: flex;
-        flex-wrap: wrap;
-        width: 75%;
+        @include min-lg {
+            display: flex;
+            flex-wrap: wrap;
+            width: 75%;
+        }
         margin: 0 auto 1.6rem auto;
         &--item {
-            width: 50%;
+            @include min-lg {
+                width: 50%;
+            }
             @include flexJustifyAlign(flex-start,center);
             gap: 2.03rem;
             margin-bottom: 2.4rem;
@@ -271,5 +307,12 @@
                 }
             }
         }
+    }
+}
+
+.scroll__slider {
+    overflow: hidden;
+    &--main {
+        transition: all 0.6s;
     }
 }

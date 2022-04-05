@@ -20,7 +20,6 @@
             width: 100%;
             display: flex;
             gap: 4.2rem;
-            overflow: hidden;
         }
         &--child {
             @include max-sm {
@@ -40,7 +39,7 @@
             @include max-sm {
                 width: 100%;
             }
-            flex-shrink: 0;  
+            // flex-shrink: 0;  
             @include min-sm {
                 padding-right: 3rem;
                 width: calc((100% / 2) - 1.5rem);
@@ -71,6 +70,19 @@
                 background-repeat: no-repeat;
                 background-size: 15% 50%;
                 transition: all 0.3s;
+            }
+            &--red {
+                position: relative;
+                z-index: 99;
+                transition: all 0.3s;
+                padding: 0rem 2.2rem;
+                padding-top: 2.3rem !important;
+                font-family: "Oswald";
+                font-style: normal;
+                font-weight: 500;
+                font-size: 1.8rem;
+                line-height: 2.8rem;
+                color: $color-red-bold;
             }
             padding: 1.2rem 0.8rem;
             &--image {
@@ -120,6 +132,9 @@
             }
             &:hover h3 {
                 color: $color-red-bold;
+            }
+            &:hover &--text {
+                color: $color-gray-bold;
             }
             & > p {
                 position: relative;
@@ -246,15 +261,37 @@
 
 .news-event {
     @include min-ss(1500px) {
-        margin: 0rem 26.6rem 18.7rem 26.6rem;
+        margin: 0rem auto 18.7rem auto;
     }
     &__top {
-        @include flexJustifyAlign(flex-start,center);
+        @include min-md {
+            @include flexJustifyAlign(flex-start,flex-start);
+        }
+        @include min-lg {
+            @include flexJustifyAlign(flex-start,center);
+        }
         &--left {
-            width: 90.2rem;
+            @include min-md {
+                width: 45rem;
+            }
+            @include min-lg {
+                width: 70rem;
+            }
+            @include min-xl {
+                width: 90.2rem;
+            }
         }
         &--right {
-            padding-left: 6.863rem;
+            @include max-md {
+                margin-top: 3rem;
+            }
+            @include max-md {
+                padding-left: 0rem;
+            }
+            padding-left: 3rem;
+            @include min-xl {
+                padding-left: 6.863rem;
+            }
             flex: 1;
             h3 {
                 font-family: 'Oswald';
@@ -266,7 +303,9 @@
                 margin-bottom: 5.3rem;
             }
             &--info {
-                padding-left: 2.8rem;
+                @include min-md {
+                    padding-left: 2.8rem;
+                }
                 h2 {
                     font-family: 'Oswald';
                     font-style: normal;
@@ -298,8 +337,10 @@
         margin-bottom: 5.2rem;
     }
     &__main {
-        margin-left: -1rem;
-        margin-right: -5.3rem;
+        @include min-sm {
+            margin-left: -1rem;
+            margin-right: -5.3rem;
+        }
         display: flex;
         flex-wrap: wrap;
     }
@@ -307,24 +348,38 @@
 
 .news-event-detail {
     @include min-ss(1500px) {
-        margin: 2.2rem 25.4rem 5.7rem 25.4rem;
+        margin: 2.2rem auto 5.7rem auto;
     }
-    display: flex;
+    @include min-lg {
+        display: flex;
+    }
     &__left {
-        max-width: 98.3rem;
+        @include min-xl {
+            max-width: 79rem;
+        }
+        @include min-ss(1440px) {
+            max-width: 98.3rem;
+        }
         &--title {
             font-family: 'Oswald';
             font-style: normal;
             font-weight: 500;
-            font-size: 4rem;
-            line-height: 5.2rem;
+            font-size: 2.8rem;
+            @include min-lg {
+                font-size: 4rem;
+                line-height: 5.2rem;
+                margin-bottom: 2.521rem;
+            }
             color: $color-red-bold;
-            margin-bottom: 2.521rem;
+            margin-bottom: 1.5rem;
         }   
         &--box {
             position: relative;
             width: 100%;
-            padding: 2.19rem 4.442rem 2.63rem 5.28rem;
+            @include min-lg {
+                padding: 2.19rem 4.442rem 2.63rem 5.28rem;
+            }
+            padding: 1.6rem;
             color: $color-gray-bold;
             font-weight: 400;
             border: 0.1rem solid $color-red-bold;
@@ -375,6 +430,9 @@
         }
     }
     &__space {
+        @include max-lg {
+            display: none;
+        }
         @include flexJustifyAlign(center,center);
         flex-direction: column;
         padding-left: 5.6rem;
@@ -391,16 +449,21 @@
         }
     }
     &__right {
+        @include max-lg {
+            margin-top: 3rem;
+        }
         &--top {
             margin-bottom: 4.3rem;
-            padding-left: 3rem;
+            @include min-lg {
+                padding-left: 3rem;
+            }
             @include flexJustifyAlign(space-between,center);
             h4 {
                 font-family: 'Oswald';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 4rem;
-                line-height: 4rem;
+                line-height: 1;
                 color: $color-red-bold;
             }
             div {
@@ -425,7 +488,9 @@
             }
         }
         &--item {
-            padding-left: 3rem;
+            @include min-lg {
+                padding-left: 3rem;
+            }
             display: flex;
             &--image {
                 width: 15.4rem;
@@ -450,8 +515,14 @@
                     line-height: 2.8rem;
                 }
             }
+            @include max-lg {
+                margin-bottom: 2rem;
+            }
         }
         &--line {
+            @include max-lg {
+                display: none;
+            }
             margin-top: 0.2rem;
             margin-bottom: 5.3rem;
             @include flexJustifyAlign(flex-start,center);

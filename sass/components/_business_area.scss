@@ -359,13 +359,16 @@
 
 .business-area-detail {
     @include min-ss(1500px) {
-        margin: 2.9rem 23.8rem 0rem 23.8rem;
+        margin: 2.9rem auto 0rem auto;
     }
     &__title {
         font-family: 'Oswald';
         font-style: normal;
         font-weight: 300;
-        font-size: 8rem;
+        font-size: 4rem;
+        @include min-lg {
+            font-size: 8rem;
+        }
         color: $color-gray-bold;
         &--main {
             padding: 7rem 0rem 4rem 0rem;

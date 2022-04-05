@@ -1,7 +1,7 @@
 .relationship {
     &__wrapper {
         @include min-ss(1500px) {
-            margin: 0rem 25.4rem;
+            margin: 0rem auto;
         }
         @include max-ss(1500px) {
             // margin-left: 1.6rem;
@@ -286,7 +286,7 @@
 .relationship-detail {
     &__wrapper {
         @include min-ss(1500px) {
-            margin: 0rem 22.8rem;
+            margin: 0rem auto;
         }
     }
     &__top {
@@ -317,6 +317,10 @@
             }
         }
         &--content {
+            @include max-xl {
+                overflow-x: scroll;
+                overflow-y: hidden;
+            }
             padding: 1.29rem 3.2rem;
             flex: 1;
             border-bottom: 0.4rem solid $color-red-bold;
@@ -324,6 +328,7 @@
             display: flex;
             gap: 4rem;
             &--item {
+                cursor: pointer;
                 position: relative;
                 font-family: 'Oswald';
                 font-style: normal;
@@ -400,9 +405,14 @@
             margin-bottom: 0rem;
             border-bottom: 0.1rem solid #C4C4C4;
             padding: 1.4rem 2rem 0rem 2rem;
-            @include flexJustifyAlign(space-between,center);
+            @include min-lg {
+                @include flexJustifyAlign(space-between,center);
+            }
             div {
                 &:nth-child(1) {
+                    @include max-lg {
+                        @include flexJustifyAlign(flex-start,center);
+                    }
                     span {
                         margin-left: 2.525rem;
                         font-style: normal;
@@ -413,6 +423,10 @@
                     }
                 }
                 &:nth-child(2) {
+                    @include max-lg {
+                        text-align: right;
+                        margin-top: 1.2rem;
+                    }
                     span {
                         margin-right: 5rem;
                         font-style: normal;

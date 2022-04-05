@@ -1,7 +1,5 @@
 .breadcrumb {
-    @include min-ss(1500px) {
-        margin: 2.2rem 25.4rem 5.7rem 25.4rem;
-    }
+    margin: 2.2rem auto 5.7rem auto;
     ul {
         display: flex;
         flex-wrap: wrap;
@@ -12,8 +10,12 @@
             padding-left: 1rem;
             font-style: normal;
             font-weight: 400;
-            font-size: 1.8rem;
-            line-height: 4rem;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            @include min-lg {
+                font-size: 1.8rem;
+                line-height: 4rem;
+            }
             a {
                 color: $color-gray-bold;
             }

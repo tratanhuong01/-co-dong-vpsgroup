@@ -1,13 +1,24 @@
 .contact {
-    @include min-ss(1500px) {
+    @include min-ss(1700px) {
         margin-left: 25.3rem;
     }
+    @include max-ss(1700px) {
+        padding: 0rem 3rem;
+    }
+    @include max-ss(1700px) {
+        padding: 0rem 1rem;
+    }
     &__wrapper {
-        display: flex;
-        align-items: center;
+        @include min-ss(1700px) {
+            display: flex;
+            align-items: center;
+        }
     }
     &__left {
-        padding-right: 13rem;
+        @include min-ss(1700px) {
+            padding-right: 13rem;
+        }
+        @include flexJustifyAlign(center,center);
         &--title {
             font-family: 'Oswald';
             font-style: normal;
@@ -20,7 +31,10 @@
         }
         &--input {
             padding-left: 2.325rem;
-            width: 61.4rem;
+            width: 100%;
+            @include min-sm {
+                width: 61.4rem;
+            }
             background: rgba(196, 196, 196, 0.1);
             border: 1px solid #EAEAEA;
             font-style: normal;
@@ -34,7 +48,10 @@
         }
         &--textarea {
             padding-left: 2.325rem;
-            width: 61.4rem;
+            width: 100%;
+            @include min-sm {
+                width: 61.4rem;
+            }
             resize: none;
             border: 1px solid #EAEAEA;
             font-style: normal;
@@ -65,14 +82,25 @@
     &__right {
         margin-top: 6rem;
         padding-top: 4.8rem;
-        height: 83.7rem;
+        @include max-md {
+            padding-bottom: 4.8rem;
+        }
+        @include min-xl {
+            height: 83.7rem;
+        }
         background-color: $color-red-bold;
         flex: 1;
         box-shadow: 0px -0.4rem 2.5rem rgba(0, 0, 0, 0.11);
         &--child {
             display: flex;
-            padding: 0rem 6.4rem;
+            padding: 0rem 1.4rem;
+            @include min-md {
+                padding: 0rem 6.4rem;
+            }
             &--item {
+                @include max-md {
+                    display: none;
+                }
                 @include flexJustifyAlign(flex-start,center);
                 flex-direction: column;
                 &--light {
@@ -88,7 +116,9 @@
             }
             &--main {
                 flex: 1;
-                padding-left: 2.8rem;
+                @include min-md {
+                    padding-left: 2.8rem;
+                }
                 padding-top: 3rem;
                 h3 {
                     font-family: 'Oswald';
@@ -106,7 +136,9 @@
                     color: #FFFFFF;
                 }
                 ul {
-                    padding-left: 8.6rem;
+                    @include min-md {
+                        padding-left: 8.6rem;
+                    }
                     margin-top: 4rem;
                     li {
                         padding-left: 2rem;
@@ -143,9 +175,6 @@
     }
     &__footer {
         padding: 12.6rem 0rem;
-        @include min-ss(1500px) {
-            margin: 0rem 25.3rem;
-        }
         &--title {
             font-family: 'Oswald';
             font-style: normal;
@@ -159,8 +188,11 @@
         &--map {
             text-align: center;
             iframe {
-                width: 110.1rem;
-                height: 54.2rem;
+                width: 100%;
+                @include min-xl {
+                    width: 110.1rem;
+                    height: 54.2rem;
+                }
             }
         }
     }

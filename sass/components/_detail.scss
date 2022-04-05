@@ -7,21 +7,27 @@
         margin-bottom: 2rem;
         &--right {
             height: 38.7rem;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: 90%;
-            background-color: #ffffff;
-            &::before {
-                content: "";
-                top: 0;
-                left: 0%;
-                width: 20%;
-                filter: blur(4px);
-                height: 38.7rem;
-                opacity: 0.8;
+            @include min-lg {
                 position: absolute;
-                background-color: $color-gray;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 90%;
+                padding: 4rem;
+            }
+            padding: 2rem;
+            background-color: #ffffff;
+            @include min-lg {
+                &::before {
+                    content: "";
+                    top: 0;
+                    left: 0%;
+                    width: 20%;
+                    filter: blur(4px);
+                    height: 38.7rem;
+                    opacity: 0.8;
+                    position: absolute;
+                    background-color: $color-gray;
+                }
             }
             &--content {
                 position: relative;
@@ -41,7 +47,6 @@
                     transform: scale(1.09,1.02);
                 }
             }
-            padding: 4rem;
             &--title {
                 font-family: 'Oswald';
                 font-style: normal;
