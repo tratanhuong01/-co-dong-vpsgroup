@@ -1,6 +1,9 @@
 .footer {
     max-width: 1290px;
     margin: auto;
+    @include max-ss(1440px) {
+        padding: 3rem;
+    }
     &__top {
         @include min-lg {
             @include flexJustifyAlign(space-between, center);

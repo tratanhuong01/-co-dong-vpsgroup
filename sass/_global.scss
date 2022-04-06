@@ -88,7 +88,10 @@
     gap: 4.4rem;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-left: -3rem;
+    margin-left: -1.5rem;
+    @include min-ss(1368px) {
+        margin-left: -3rem;
+    }
     transform: translateX(1.2rem);
     @include min-ss(1500px) {
         margin: 0.8rem auto 3rem auto !important;
