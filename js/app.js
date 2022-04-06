@@ -41,6 +41,7 @@ headerItemMobile.addEventListener('click', () => {
         modal.removeEventListener('click', clickOutSide)
     }
     else {
+        headerMenu.style = '';
         headerMenu.classList.add('header__menu--show');
         modal.classList.add('modal__active');
         document.body.style.overflow = 'hidden';
@@ -87,12 +88,12 @@ const handleClickSliderHozi = (isNext, sliderMain, indexSlider) => {
     } else {
         if (indexSliderHozi - 1 < 0) {
             indexSliderHozi = length - 1;
-            // current = ((length - 1) * 100) + ((sliderMain.children.length % 3) * (100 / 3))
-            //     + 4
+            current = ((length - 2 < 0 ? 0 : length - 2) * 100) + ((sliderMain.children.length % 3) * (100 / 3))
+                + 4;
         }
         else {
             indexSliderHozi--;
-            if (indexSliderHozi === 0) {
+            if (indexSliderHozi < 0) {
                 current = ((length - 2 < 0 ? 0 : length - 2) * 100) - ((sliderMain.children.length % 3) * (100 / 3))
                     + 4
             }
@@ -183,3 +184,12 @@ if (yearList && indexYear && buttonYearLeft && buttonYearRight) {
         pass(yearList[pos], pos);
     })
 }
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 1140) {
+        clickOutSide();
+    }
+    else {
+        headerMenu.style.transition = 'none';
+    }
+})

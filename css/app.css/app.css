@@ -526,7 +526,7 @@ img {
   display: flex !important;
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1024px) {
   .banner__content--max {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -534,7 +534,7 @@ img {
   }
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1024px) {
   .banner__content--min {
     display: none !important;
   }
@@ -4381,8 +4381,8 @@ img {
 }
 
 .header__right--call div {
-  -webkit-transition: width .3s;
-  transition: width .3s;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
   background-color: #ffffff;
   border-radius: 0.3rem;
   width: 7.174rem;

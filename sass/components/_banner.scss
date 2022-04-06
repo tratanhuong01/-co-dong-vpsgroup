@@ -23,12 +23,12 @@
         &--min {
             display: flex !important;
         }
-        @include min-xl {
+        @include min-lg {
             &--max {
                 display: flex !important;
             }
         }
-        @include min-xl {
+        @include min-lg {
             &--min {
                 display: none !important;
             }
