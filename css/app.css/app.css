@@ -185,7 +185,7 @@ img {
 
 @media all and (min-width: 1368px) {
   .catelog {
-    margin-left: -3rem;
+    margin-left: 0rem;
   }
 }
 
@@ -198,7 +198,7 @@ img {
 .catelog__item {
   cursor: pointer;
   position: relative;
-  width: 32.1rem;
+  width: 30.5rem;
   margin-top: -0.2rem;
   border: 1px solid rgba(182, 0, 0, 0.15);
 }
@@ -280,12 +280,15 @@ img {
 }
 
 .catelog-five {
-  margin-left: -2rem;
+  margin-left: -1rem;
   padding-top: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 4.4rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transform: translateX(1.2rem);
           transform: translateX(1.2rem);
 }
@@ -294,9 +297,6 @@ img {
   .catelog-five {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -309,7 +309,7 @@ img {
 .catelog-five__item {
   cursor: pointer;
   position: relative;
-  width: 25.1rem;
+  width: 24.1rem;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-top: -0.2rem;
@@ -4358,7 +4358,33 @@ img {
   }
 }
 
-@media all and (min-width: 1368px) {
+@media all and (min-width: 1280px) {
+  .header__right {
+    width: 17rem;
+  }
+  .header__right:hover {
+    width: 38rem;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+    padding-right: 3rem;
+    border: 1px solid #ffffff;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .header__right {
+    width: 17rem;
+  }
+  .header__right:hover {
+    width: 45rem;
+    -webkit-transform: translateX(3rem);
+            transform: translateX(3rem);
+    padding-right: 3rem;
+    border: 1px solid #ffffff;
+  }
+}
+
+@media all and (min-width: 1500px) {
   .header__right {
     width: 17rem;
   }

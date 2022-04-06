@@ -153,7 +153,26 @@
         //         border: 1px solid #ffffff;
         //     }
         // }
-        @include min-ss(1368px) {
+        @include min-xl {
+            width: 17rem;
+            &:hover {
+                width: 38rem;
+                transform: translateX(3rem);
+                padding-right: 3rem;
+                border: 1px solid #ffffff;
+            }
+        }
+        @include min-ss(1440px) {
+            width: 17rem;
+            &:hover {
+                width: 45rem;
+                transform: translateX(3rem);
+                padding-right: 3rem;
+                border: 1px solid #ffffff;
+            }
+        }
+
+        @include min-ss(1500px) {
             width: 17rem;
             &:hover {
                 width: 39rem;

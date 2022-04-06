@@ -90,7 +90,7 @@
     justify-content: space-around;
     margin-left: -1.5rem;
     @include min-ss(1368px) {
-        margin-left: -3rem;
+        margin-left: 0rem;
     }
     transform: translateX(1.2rem);
     @include min-ss(1500px) {
@@ -131,7 +131,7 @@
                 color: #FFFFFF;
             }
         }
-        width: 32.1rem;
+        width: 30.5rem;
         margin-top: -0.2rem;
         border: 1px solid rgba(182, 0, 0, 0.15);
         &--main {
@@ -168,13 +168,13 @@
 }
 
 .catelog-five {
-    margin-left: -2rem;
+    margin-left: -1rem;
     padding-top: 3rem;
     display: flex;
     gap: 4.4rem;
+    justify-content: center;
     @include max-xl {
         flex-wrap: wrap;
-        justify-content: center;
     }
     transform: translateX(1.2rem);
     @include min-ss(1500px) {
@@ -215,7 +215,7 @@
                 color: #FFFFFF;
             }
         }
-        width: 25.1rem;
+        width: 24.1rem;
         flex-shrink: 0;
         margin-top: -0.2rem;
         border: 1px solid rgba(182, 0, 0, 0.15);
