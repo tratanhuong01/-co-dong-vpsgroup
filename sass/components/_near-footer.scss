@@ -24,6 +24,9 @@
     }
     &--content {
         @include max-ss(1550px) {
+            padding-left: 3.5rem;
+        }
+        @include max-lg {
             padding: 0rem 3.5rem;
         }
         position: absolute;
@@ -166,7 +169,7 @@
                     linear-gradient(to left, #ccc 2px, transparent 2px) 100% 0%,
                     linear-gradient(to bottom, #ccc 2px, transparent 2px) 100% 0%;
                 background-repeat: no-repeat;
-                background-size: 15% 50%;
+                background-size: 1% 1%;
                 transition: all 0.3s;
             }
             padding: 1.4rem 1rem;
@@ -230,6 +233,7 @@
                     transform: scale(0.98);
                     visibility: visible;
                     z-index: 20;
+                    background-size: 15% 50%;
                 }
             }
             &:hover &--footer &--footer--continue {
@@ -268,7 +272,7 @@
                     gap: 1rem;
                     padding-right: 2.2rem;
                     transition: all 0.3s;
-                    & > p {
+                    & > a {
                         transform: translateX(25%);
                         font-style: normal;
                         font-weight: 300;

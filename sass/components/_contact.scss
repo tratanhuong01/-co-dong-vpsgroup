@@ -9,12 +9,15 @@
         padding: 0rem 1rem;
     }
     &__wrapper {
-        @include min-ss(1700px) {
+        @include min-xl {
             display: flex;
             align-items: center;
         }
     }
     &__left {
+        @include min-xl {
+            padding-right: 5rem;
+        }
         @include min-ss(1700px) {
             padding-right: 13rem;
         }

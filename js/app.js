@@ -193,3 +193,11 @@ window.addEventListener('resize', () => {
         headerMenu.style.transition = 'none';
     }
 })
+
+if ($('.partner__content')) {
+    // $('.partner__content').slick({
+    //     speed: 300,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 4,
+    // });
+}

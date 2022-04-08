@@ -61,7 +61,7 @@
             position: relative;
             height: 19.6rem;
             &:hover &--main {
-                opacity: 1;
+                visibility: visible;
                 transform: scaleY(1.39);
             }
             &:hover &--top {
@@ -117,8 +117,8 @@
             }
             &--main {
                 transform-origin: 50% 50%;
-                transition: all 1s;
-                opacity: 0;
+                transition: transform 1s;
+                visibility: hidden;
                 position: absolute;
                 top: 0;
                 left: 0;

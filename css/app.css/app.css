@@ -723,7 +723,7 @@ img {
   right: 0;
   background: linear-gradient(to right, #ccc 2px, transparent 2px) 0 100%, linear-gradient(to top, #ccc 2px, transparent 2px) 0 100%, linear-gradient(to left, #ccc 2px, transparent 2px) 100% 0%, linear-gradient(to bottom, #ccc 2px, transparent 2px) 100% 0%;
   background-repeat: no-repeat;
-  background-size: 15% 50%;
+  background-size: 1% 1%;
   transition: all 0.3s;
 }
 
@@ -840,7 +840,7 @@ img {
   transition: all 0.3s;
 }
 
-.news__event__content--item--footer--continue > p {
+.news__event__content--item--footer--continue > a {
   transform: translateX(25%);
   font-style: normal;
   font-weight: 300;
@@ -857,6 +857,7 @@ img {
 .news__event__content--item:hover::before {
   transform: scale(1);
   visibility: visible;
+  background-size: 15% 50%;
 }
 
 .news__event__content--item:hover .news__event__content--item--footer .news__event__content--item--footer--continue {
@@ -1369,12 +1370,25 @@ img {
   margin-top: -3rem;
   margin-left: -1rem;
   margin-bottom: 3rem;
+  position: relative;
 }
 
 @media all and (min-width: 1024px) {
   .business__area {
     margin-bottom: 19rem;
   }
+}
+
+.business__area::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  height: 50rem;
+  background-color: #F7F7F7;
 }
 
 .business__area--container {
@@ -1504,9 +1518,12 @@ img {
   width: 100%;
   margin-left: 5.867rem;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 .business__area--item {
+  background-color: #ffffff;
   padding: 0.7rem;
   position: relative;
   width: 40.6rem;
@@ -1569,6 +1586,10 @@ img {
   background-color: #FFEF00;
 }
 
+.business__area--item:hover {
+  background-color: transparent;
+}
+
 .business__area--item:hover::before {
   display: none;
 }
@@ -1593,6 +1614,10 @@ img {
 
 .business__area--item:hover .business__area--item--top {
   background-size: 100% 100%;
+}
+
+.business__area--item:hover .business__area--item--image {
+  z-index: -100;
 }
 
 .business__area--item--top {
@@ -1624,7 +1649,7 @@ img {
 
 .business__area--item--image {
   position: relative;
-  z-index: -100;
+  z-index: 100;
   transform: translateY(4rem);
   padding: 2.226rem;
 }
@@ -1862,6 +1887,12 @@ img {
 
 @media all and (max-width: 1550px) {
   .near__footer--content {
+    padding-left: 3.5rem;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .near__footer--content {
     padding: 0rem 3.5rem;
   }
 }
@@ -2053,7 +2084,7 @@ img {
   right: 0;
   background: linear-gradient(to right, #ccc 2px, transparent 2px) 0 100%, linear-gradient(to top, #ccc 2px, transparent 2px) 0 100%, linear-gradient(to left, #ccc 2px, transparent 2px) 100% 0%, linear-gradient(to bottom, #ccc 2px, transparent 2px) 100% 0%;
   background-repeat: no-repeat;
-  background-size: 15% 50%;
+  background-size: 1% 1%;
   transition: all 0.3s;
 }
 
@@ -2133,6 +2164,7 @@ img {
   transform: scale(0.98);
   visibility: visible;
   z-index: 20;
+  background-size: 15% 50%;
 }
 
 .near__footer--content--item:hover .near__footer--content--item--footer .near__footer--content--item--footer--continue {
@@ -2185,7 +2217,7 @@ img {
   transition: all 0.3s;
 }
 
-.near__footer--content--item--footer--continue > p {
+.near__footer--content--item--footer--continue > a {
   transform: translateX(25%);
   font-style: normal;
   font-weight: 300;
@@ -2296,7 +2328,7 @@ img {
 
 .relationship__left--container::after {
   content: "";
-  width: 1rem;
+  width: 0.5rem;
   margin-left: auto;
   position: absolute;
   margin-top: 3.6rem;
@@ -2304,7 +2336,7 @@ img {
   visibility: hidden;
   transition: all 0.3s;
   transform: rotate(180deg);
-  transform-origin: 50% 50%;
+  transform-origin: top;
   border-right: 0.1rem solid #c4c4c4;
 }
 
@@ -2809,7 +2841,7 @@ img {
 }
 
 .report__content--item:hover .report__content--item--main {
-  opacity: 1;
+  visibility: visible;
   transform: scaleY(1.39);
 }
 
@@ -2874,8 +2906,8 @@ img {
 
 .report__content--item--main {
   transform-origin: 50% 50%;
-  transition: all 1s;
-  opacity: 0;
+  transition: transform 1s;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -3282,7 +3314,7 @@ img {
   }
 }
 
-@media all and (min-width: 1700px) {
+@media all and (min-width: 1280px) {
   .contact__wrapper {
     display: flex;
     align-items: center;
@@ -3293,6 +3325,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media all and (min-width: 1280px) {
+  .contact__left {
+    padding-right: 5rem;
+  }
 }
 
 @media all and (min-width: 1700px) {
@@ -3671,7 +3709,6 @@ img {
       width: 0rem;
     }
     50% {
-      box-shadow: 0px 0px 8px 6px #f0eded;
       width: 5rem;
     }
     100% {
@@ -3683,7 +3720,6 @@ img {
     position: absolute;
     top: 100%;
     opacity: 0;
-    box-shadow: 0px 0px 8px 6px #f0eded;
     margin-top: 0.5rem;
     width: 0rem;
     height: 0rem;

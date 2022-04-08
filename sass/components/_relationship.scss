@@ -86,7 +86,7 @@
         &--container {
             &::after {
                 content: "";
-                width: 1rem;
+                width: 0.5rem;
                 margin-left: auto;
                 position: absolute;
                 margin-top: 3.6rem;
@@ -94,7 +94,7 @@
                 visibility: hidden;
                 transition: all 0.3s;
                 transform: rotate(180deg);
-                transform-origin: 50% 50%;
+                transform-origin: top;
                 border-right: 0.1rem solid $color-gray;
             }
         }
