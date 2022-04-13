@@ -201,3 +201,13 @@ if ($('.partner__content')) {
     //     slidesToScroll: 4,
     // });
 }
+
+$('.partner__content').slick({
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: true,
+    nextArrow: $('.partner__button--right'),
+    prevArrow: $('.partner__button--left')
+});

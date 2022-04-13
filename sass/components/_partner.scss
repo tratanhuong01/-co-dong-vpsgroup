@@ -17,7 +17,7 @@
             display: none;
         }
         position: absolute;
-        top: 35%;
+        top: 60%;
         transform: translateX(-50%);
         z-index: 50;
         width: 4rem;
@@ -47,9 +47,11 @@
         border: 0.1rem solid #838383;
         margin-left: 1rem;
         overflow: hidden;
-        @include flexJustifyAlign(space-around,center);
-        li {
+        @include flexJustifyAlign(flex-start,center);
+        &--item {
             width: 20%;
+            flex-shrink: 0;
+            display: flex !important;
             @include flexJustifyAlign(center,center);
             a {
                 img {
@@ -63,5 +65,8 @@
                 }
             }
         }
+    }
+    &__content .slick-track {
+        @include flexJustifyAlign(center,center);
     }
 }
